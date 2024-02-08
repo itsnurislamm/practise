@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт с продуктами</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <ul>
+                <li><a href="#" class="active">Стопы</a></li>
+                <li><a href="#">Прием</a></li>
+                <li><a href="#">Курьеры</a></li>
+                <li><a href="#">Графики</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>Поставить продукт в стоп</h1>
+        <form id="productForm">
+            <label for="productName">Название продукта:</label>
+            <input type="text" id="productName" required>
+            <label for="reason">Причина стопа:</label>
+            <select id="reason" required>
+                <option value="warehouse">Закончилось на складе</option>
+                <option value="supplier">Закончилось у поставщика</option>
+                <option value="thawing">Закончилось на разморозке</option>
+                <option value="menu">Выведено из меню</option>
+            </select>
+            <label for="manager">Менеджер поставивший в стоп:</label>
+            <input type="text" id="manager" required>
+            <button type="submit">Поставить в стоп</button>
+        </form>
+        <h2>Продукты в стопе:</h2>
+        <ul id="productList"></ul>
+    </div>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
